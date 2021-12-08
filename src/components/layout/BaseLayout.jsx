@@ -1,16 +1,11 @@
-import React from 'react'
-import Header from './Header'
+import React from 'react';
 
-function BaseLayout({children}) {
-    return (
-        <>
-        <Header />
-
-        <br />
-
-        {children}
-        </>
-    )
+function BaseLayout({ children }) {
+  return (
+    <>
+      {children}
+    </>
+  );
 }
 
-export default BaseLayout
+export default BaseLayout;
