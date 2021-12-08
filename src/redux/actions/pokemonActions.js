@@ -6,7 +6,7 @@ export const FetchPokemonList = (page) => async (dispatch) => {
 
   try {
     dispatch({
-      type: 'POKEMON_LIST_LOADING'
+      type: 'FETCH_POKEMON_LIST_LOADING'
     });
 
     const response = await axios.get(
@@ -14,13 +14,13 @@ export const FetchPokemonList = (page) => async (dispatch) => {
     );
 
     dispatch({
-      type: 'POKEMON_LIST_SUCCESS',
+      type: 'FETCH_POKEMON_LIST_SUCCESS',
       payload: response.data,
     });
   } catch(err){
     console.log(err.message);
     dispatch({
-      type:' POKEMON_LIST_FAIL',
+      type:'FETCH_POKEMON_LIST_FAIL',
     });
   }
 };
