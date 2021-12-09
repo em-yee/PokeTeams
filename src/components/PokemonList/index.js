@@ -24,6 +24,7 @@ const PokemonList = () => {
       justifyContent="center"
       flexDirection="column"
       width="100%"
+      minWidth="50vw"
       height="100vh"
       boxSizing="border-box"
       overflow="auto"

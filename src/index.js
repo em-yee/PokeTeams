@@ -7,10 +7,12 @@ import App from './App';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BaseLayout from './components/layout/BaseLayout';
 import store from './redux/store';
+import { ChakraProvider } from '@chakra-ui/react';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+    <ChakraProvider>
       <Router>
         <BaseLayout>
           <Routes>
@@ -18,6 +20,7 @@ ReactDOM.render(
           </Routes>
         </BaseLayout>
       </Router>
+    </ChakraProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
