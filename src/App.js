@@ -1,8 +1,9 @@
 import React from 'react';
 import PokemonList from './components/PokemonList';
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import { Container } from '@chakra-ui/react';
 
-const wrapper = css`
+const AppWrapper = styled(Container)`
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
@@ -10,9 +11,9 @@ const wrapper = css`
 
 function App() {
   return (
-    <div css={wrapper}>
+    <AppWrapper maxW="1200px">
       <PokemonList />
-    </div>
+    </AppWrapper>
   );
 }
 
