@@ -1,3 +1,4 @@
+import './wdyr';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -11,16 +12,16 @@ import { ChakraProvider } from '@chakra-ui/react';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <ChakraProvider>
-      <Router>
-        <BaseLayout>
-          <Routes>
-            <Route path="/" element={<App />} />
-          </Routes>
-        </BaseLayout>
-      </Router>
-    </ChakraProvider>
+      <ChakraProvider>
+        <Router>
+          <BaseLayout>
+            <Routes>
+              <Route path="/" element={<App />} />
+            </Routes>
+          </BaseLayout>
+        </Router>
+      </ChakraProvider>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );
