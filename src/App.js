@@ -1,5 +1,4 @@
 import React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
 import PokemonList from './components/PokemonList';
 import { css } from '@emotion/react';
 

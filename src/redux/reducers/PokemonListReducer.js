@@ -3,7 +3,7 @@ const initialState = {
   data: [],
   errorMessage: '',
   count: 0,
-}
+};
 
 export const PokemonListReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -16,16 +16,16 @@ export const PokemonListReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        errorMessage: 'No Pokemon found!!'
+        errorMessage: 'No Pokemon found!!',
       };
     case 'FETCH_POKEMON_LIST_SUCCESS':
       return {
         ...state,
         loading: false,
         data: action.payload.results,
-        count: action.payload.count
+        count: action.payload.count,
       };
     default:
       return state;
   }
-}
+};

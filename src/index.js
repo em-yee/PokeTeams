@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-
 import App from './App';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BaseLayout from './components/layout/BaseLayout';
@@ -23,5 +22,5 @@ ReactDOM.render(
     </ChakraProvider>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
