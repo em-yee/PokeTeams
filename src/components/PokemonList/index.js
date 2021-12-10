@@ -27,38 +27,6 @@ const PokemonList = () => {
     dispatch(FetchPokemonList(currentPage));
   }, [currentPage, dispatch]);
 
-  // const handleShowData = () => {
-  //   if (pokemonList.loading) {
-  //     return (
-  //       <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" />
-  //     );
-  //   }
-  //
-  //   if (pokemonList.data.length) {
-  //     return (
-  //       <SimpleGrid columns={[3, null, 4, 5]} spacing={15} mb="2rem">
-  //         {pokemonList.data.length !== 0 &&
-  //           pokemonList.data.map((pokemonItem) => {
-  //             return (
-  //               <PokemonItem
-  //                 key={uuidv4()}
-  //                 data={pokemonItem}
-  //                 setPokemonTeam={setPokemonTeam}
-  //                 pokemonTeam={pokemonTeam}
-  //               />
-  //             );
-  //           })}
-  //       </SimpleGrid>
-  //     );
-  //   }
-  //
-  //   if (pokemonList.errorMessage !== '') {
-  //     return <p>{pokemonList.errorMessage}</p>;
-  //   }
-  //
-  //   return <p>Unable to fetch data</p>;
-  // };
-
   return (
     <Container
       display="flex"
@@ -87,11 +55,11 @@ const PokemonList = () => {
         {pokemonTeam.length !== 0 ? (
           <PokemonTeam pokemonTeam={pokemonTeam} setPokemonTeam={setPokemonTeam} />
         ) : (
-          <div>You have no Pokemon D:</div>
+          <div>You have no Pokemon :/</div>
         )}
       </Box>
       {pokemonList.loading ? (
-        <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" />
+        <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" /> //change to the loading-pokeball.gif
       ) : (
         <Box width="100%" position="relative" zIndex="1">
           <SimpleGrid columns={[3, null, 4, 5]} spacing={15} mb="2rem">
