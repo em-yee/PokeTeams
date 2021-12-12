@@ -1,10 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Box, Button, Container, SimpleGrid, Spinner, Text } from '@chakra-ui/react';
+import { Box, Button, Container, SimpleGrid, Image, Text } from '@chakra-ui/react';
 import PokemonItem from '../PokemonItem';
 import { FetchPokemonList } from '../../redux/actions/pokemonActions';
 import PokemonTeam from '../PokemonTeam';
 import { v4 as uuidv4 } from 'uuid';
+import PokeballSpinner from '../../assets/images/loading-pokeball.gif';
 
 const PokemonList = () => {
   const dispatch = useDispatch();
@@ -59,7 +60,7 @@ const PokemonList = () => {
         )}
       </Box>
       {pokemonList.loading ? (
-        <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" /> //change to the loading-pokeball.gif
+        <Image src={PokeballSpinner} alt="spinning pokeball" />
       ) : (
         <Box width="100%" position="relative" zIndex="1">
           <SimpleGrid columns={[3, null, 4, 5]} spacing={15} mb="2rem">
@@ -89,6 +90,7 @@ const PokemonList = () => {
         </Box>
       )}
       {pokemonList.errorMessage !== '' ? <Text>{pokemonList.errorMessage}</Text> : null}
+      <Image src={PokeballSpinner} alt="spinning pokeball" maxW="220px" />
     </Container>
   );
 };
