@@ -6,10 +6,9 @@ import { Box } from '@chakra-ui/react';
 import HomePage from './components/HomePage';
 
 const AppWrapper = styled(Box)`
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   box-sizing: border-box;
-  overflow: none !important;
 `;
 
 function App() {

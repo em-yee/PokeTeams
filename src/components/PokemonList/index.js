@@ -34,12 +34,11 @@ const PokemonList = () => {
       alignItems="center"
       justifyContent="flex-start"
       flexDir="column"
-      maxWidth="none"
       width="100%"
       height="100vh"
       boxSizing="border-box"
-      overflow="auto"
-      p="2rem"
+      p="4rem 2rem 2rem 2rem"
+      maxWidth="1000px"
     >
       <Box
         width="100%"

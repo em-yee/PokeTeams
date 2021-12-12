@@ -1,12 +1,12 @@
 import React from 'react';
-import { Box, Image } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import { Box, Image, Button } from '@chakra-ui/react';
 import background from '../../assets/images/pokemon-bg.png';
 
 function HomePage() {
   return (
     <Box
       width="100vw"
-      overflow="none"
       h="100vh"
       boxSizing="border-box"
       d="flex"
@@ -17,9 +17,14 @@ function HomePage() {
       justifyContent="center"
       background="#ffdfa0"
       zIndex="1"
+      flexDirection="column"
     >
-      <Image src={background} position="absolute" bottom="0" />
-      <h1>Home Page!!</h1>
+      <Image src={background} position="absolute" bottom="0" pb={[0, 1, 3]} />
+      <h1 style={{ fontSize: '2rem' }}>Welcome to PokéTeams!</h1>
+      <br />
+      <Button background="#ffca59">
+        <Link to="/find-pokemon">Create your team here!</Link>
+      </Button>
     </Box>
   );
 }

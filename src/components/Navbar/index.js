@@ -8,10 +8,13 @@ const NavbarWrapper = styled(Box)`
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  postion: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
+  background: #dd8749;
+  color: white;
+  padding: 1rem;
 `;
 
 function Navbar() {
