@@ -6,7 +6,13 @@ import Navbar from '../Navbar';
 
 function BaseLayout({ children }) {
   return (
-    <Box w="100%">
+    <Box
+      width="100vw"
+      overflow="none"
+      h="100vh"
+      boxSizing="border-box"
+      position="absolute"
+      >
       <Navbar />
 
       {children}
