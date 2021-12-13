@@ -20,6 +20,7 @@ import PokemonTeam from '../PokemonTeam';
 import { v4 as uuidv4 } from 'uuid';
 import PokeballSpinner from '../../assets/images/loading-pokeball.gif';
 import { FlexWrapper } from '../index.css';
+import Navbar from '../Navbar';
 
 const PokemonList = () => {
   const dispatch = useDispatch();
@@ -56,6 +57,7 @@ const PokemonList = () => {
       // maxWidth="2000px"
       backgroundColor="#ffda9b"
     >
+      <Navbar />
       <Drawer
         isOpen={drawerOpen}
         placement="right"

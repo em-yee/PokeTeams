@@ -7,7 +7,7 @@ const NavbarWrapper = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,9 +17,23 @@ const NavbarWrapper = styled(Box)`
   padding: 1rem;
 `;
 
-function Navbar() {
+function Navbar(pokeType) {
+  const [bgColor, setBgColor] = React.useState('');
+
+  React.useEffect(() => {
+    console.log(pokeType);
+    if (pokeType !== undefined) {
+      switch (pokeType) {
+        case 'Bug':
+          setBgColor('#');
+          break;
+        default:
+          setBgColor('#');
+      }
+    }
+  }, [pokeType]);
   return (
-    <NavbarWrapper>
+    <NavbarWrapper background={bgColor}>
       <Link to="/">Home</Link>
       <Link to="/find-pokemon">Find Pokémon!</Link>
       {/* <Link>About Me(?)</Link> */}
