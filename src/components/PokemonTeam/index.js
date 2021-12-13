@@ -1,5 +1,14 @@
 import React from 'react';
-import { Box, Button, CloseButton, Container, Flex, Image, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  CloseButton,
+  Container,
+  Flex,
+  Image,
+  Text,
+  SimpleGrid,
+} from '@chakra-ui/react';
 
 function PokemonTeam({ pokemonTeam, setPokemonTeam }) {
   const handleClearPokemonTeam = (e) => {
@@ -14,25 +23,30 @@ function PokemonTeam({ pokemonTeam, setPokemonTeam }) {
   return (
     <Container
       width="100%"
+      // height="100%"
       display="flex"
-      alignItems="flex-start"
-      justifyContent="flex-start"
+      alignItems="center"
+      justifyContent="space-between"
       flexDir="column"
       maxWidth="none"
+      p={3}
     >
-      <Flex alignItems="flex-start" justifyContent="space-between" w="100%">
-        <Text fontSize="1.4rem">My Team</Text>
-        <Button backgroundColor="red.200" onClick={handleClearPokemonTeam}>
-          Clear Team
-        </Button>
-      </Flex>
-      <Flex width="100%" alignItems="flex-start" justifyContent="center" mb="1rem">
+      <Text fontSize="1.4rem">My Team</Text>
+      <SimpleGrid
+        // width="100%"
+        // alignItems="center"
+        // justifyContent="flex-start"
+        // mb="1rem"
+        // flexDirection="column"
+        columns={2}
+        spacing="5"
+      >
         {pokemonTeam.length !== 0 &&
           pokemonTeam.map((member, index) => (
             <Box
               key={index}
               p={[4]}
-              mx="1rem"
+              my="1rem"
               backgroundColor="white"
               borderRadius="md"
               shadow="md"
@@ -53,10 +67,15 @@ function PokemonTeam({ pokemonTeam, setPokemonTeam }) {
                   cursor: 'pointer',
                 }}
               />
-              <Image height="80px" width="80px" src={member.imgUrl} alt="name" />
+              <Image height="100px" width="100px" src={member.imgUrl} alt="name" />
               <Text>{member.name}</Text>
             </Box>
           ))}
+      </SimpleGrid>
+      <Flex alignItems="flex-end" justifyContent="flex-end" w="100%" mt="2rem">
+        <Button backgroundColor="red.200" onClick={handleClearPokemonTeam}>
+          Clear Team
+        </Button>
       </Flex>
     </Container>
   );

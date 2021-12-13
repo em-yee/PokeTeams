@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Image, Skeleton, Text } from '@chakra-ui/react';
+import { Box, Image, Skeleton, Text, Flex } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FetchPokemon } from '../../redux/actions/pokemonActions';
+import { InfoIcon, AddIcon } from '@chakra-ui/icons';
+import { Link } from 'react-router-dom';
 
 const PokemonItem = ({ data, pokemonTeam, setPokemonTeam }) => {
   const dispatch = useDispatch();
@@ -53,11 +55,13 @@ const PokemonItem = ({ data, pokemonTeam, setPokemonTeam }) => {
 
   return pokeData.imgUrl !== '' && !pokemonData.loading ? (
     <Box
-      onClick={handleAddToPokemonTeam}
       maxW="150px"
+      width="100%"
       p={[2]}
+      m={[2]}
       borderRadius="md"
       boxShadow="lg"
+      backgroundColor="white"
       overflow="hidden"
       display="flex"
       alignItems="center"
@@ -70,7 +74,15 @@ const PokemonItem = ({ data, pokemonTeam, setPokemonTeam }) => {
       {/*{pokemonData.data[name] !== undefined && handleShowPokemon()}*/}
       {pokemonData.loading ? <Skeleton height="134px" /> : <Image src={pokeData.imgUrl} />}
 
-      <Text textAlign="center">{name}</Text>
+      <Box>
+        <Text textAlign="center">{name}</Text>
+        <Flex width="100%" alignItems="center" justifyContent="center">
+          <Link to={`/pokemon-info/${name}`}>
+            <InfoIcon w={3} h={3} mr="4px" />
+          </Link>
+          <AddIcon w={3} h={3} ml="4px" onClick={handleAddToPokemonTeam} />
+        </Flex>
+      </Box>
     </Box>
   ) : null;
 };

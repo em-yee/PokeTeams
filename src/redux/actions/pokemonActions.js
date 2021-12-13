@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const FetchPokemonList = (page) => async (dispatch) => {
-  const itemsPerPage = 15;
+  const itemsPerPage = 18;
   const offset = page * itemsPerPage - itemsPerPage;
 
   try {

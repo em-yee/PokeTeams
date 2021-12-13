@@ -4,6 +4,7 @@ import PokemonList from './components/PokemonList';
 import styled from '@emotion/styled';
 import { Box } from '@chakra-ui/react';
 import HomePage from './components/HomePage';
+import PokemonInfo from './components/PokemonInfo/index';
 
 const AppWrapper = styled(Box)`
   height: 100vh;
@@ -13,10 +14,11 @@ const AppWrapper = styled(Box)`
 
 function App() {
   return (
-    <AppWrapper position="absolute">
+    <AppWrapper>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/find-pokemon" element={<PokemonList />} />
+        <Route path="/pokemon-info/:pokemon" element={<PokemonInfo />} />
       </Routes>
     </AppWrapper>
   );
