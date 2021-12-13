@@ -41,32 +41,55 @@ function PokemonInfo() {
     //     setBgColor('#5eae49');
     //     break;
     //   case 'Dark':
-    //     setBgColor('#');
+    //     setBgColor('#A1AACE');
     //     break;
-    //   case '':
-    //     setBgColor('#');
+    //   case 'Dragon':
+    //     setBgColor('#E4F0FF');
     //     break;
-    //   case '':
-    //     setBgColor('#');
+    //   case 'Electric':
+    //     setBgColor('#FDF0CA');
     //     break;
-    //   case '':
-    //     setBgColor('#');
+    //   case 'Fairy':
+    //     setBgColor('#FFE6FF');
     //     break;
-    //   case '':
-    //     setBgColor('#');
+    //   case 'Fight':
+    //     setBgColor('#E49B95');
     //     break;
-    //case '':
-    //     setBgColor('#');
+    //    case 'Fire':
+    //     setBgColor('#CD7626');
     //     break;
-    //case '':
-    //     setBgColor('#');
+    //    case 'Flying':
+    //     setBgColor('#E2F0FF');
     //     break;
-    //case '':
-    //     setBgColor('#');
+    //    case 'Rock':
+    //     setBgColor('#FBF1CA');
     //     break;
-
+    //    case 'Psychic':
+    //     setBgColor('#FFE4DF');
+    //     break;
+    //    case 'Posion':
+    //     setBgColor('#FFE8FF');
+    //     break;
+    //    case 'Normal':
+    //     setBgColor('#F1FAFF');
+    //     break;
+    //    case 'Ground':
+    //     setBgColor('#FFE7D3');
+    //     break;
+    //    case 'Grass':
+    //     setBgColor('#4E7950');
+    //     break;
+    //    case 'Ghost':
+    //     setBgColor('#D6D7FF');
+    //     break;
+    //    case 'Steel':
+    //     setBgColor('#C8E1D9');
+    //     break;
+    //    case 'Water':
+    //     setBgColor('#D4F4FF');
+    //     break;
     //   default:
-    //     setBgColor('#');
+    //     setBgColor('#ffda9b');
     // }
   }, [pokeData]);
 
