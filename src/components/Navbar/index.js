@@ -17,62 +17,61 @@ const NavbarWrapper = styled(Box)`
   padding: 1rem;
 `;
 
-function Navbar(pokeType) {
+function Navbar({ pokeType }) {
   const [bgColor, setBgColor] = React.useState('');
 
   React.useEffect(() => {
-    console.log(pokeType);
-    if (pokeType !== undefined) {
+    if (pokeType !== '') {
       switch (pokeType) {
-        case 'Bug':
+        case 'bug':
           setBgColor('#009268');
           break;
-        case 'Dark':
+        case 'dark':
           setBgColor('#424656');
           break;
-        case 'Dragon':
+        case 'dragon':
           setBgColor('#0090D7');
           break;
-        case 'Electric':
+        case 'electric':
           setBgColor('#FFCF70');
           break;
-        case 'Fairy':
+        case 'fairy':
           setBgColor('#FF8BC0');
           break;
-        case 'Fight':
+        case 'fight':
           setBgColor('#680000');
           break;
-        case 'Fire':
+        case 'fire':
           setBgColor('#FFEACF');
           break;
-        case 'Flying':
+        case 'flying':
           setBgColor('#526C9D');
           break;
-        case 'Rock':
+        case 'rock':
           setBgColor('#978C56');
           break;
-        case 'Psychic':
+        case 'psychic':
           setBgColor('#D35D5A');
           break;
-        case 'Posion':
+        case 'posion':
           setBgColor('#701F89');
           break;
-        case 'Normal':
+        case 'normal':
           setBgColor('#3C4856');
           break;
-        case 'Ground':
+        case 'ground':
           setBgColor('#9F4D25');
           break;
-        case 'Grass':
+        case 'grass':
           setBgColor('#e9f5db');
           break;
-        case 'Ghost':
+        case 'ghost':
           setBgColor('#5A63B5');
           break;
-        case 'Steel':
+        case 'steel':
           setBgColor('#003F47');
           break;
-        case 'Water':
+        case 'water':
           setBgColor('#006CA2');
           break;
         default:
@@ -80,8 +79,13 @@ function Navbar(pokeType) {
       }
     }
   }, [pokeType]);
+
+  React.useEffect(() => {
+    console.log(bgColor);
+  }, [bgColor]);
+
   return (
-    <NavbarWrapper background={bgColor}>
+    <NavbarWrapper background={`${bgColor} !important`} color="black !important">
       <Link to="/">Home</Link>
       <Link to="/find-pokemon">Find Pokémon!</Link>
       {/* <Link>About Me(?)</Link> */}
