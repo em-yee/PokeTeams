@@ -54,10 +54,12 @@ const PokemonList = () => {
       boxSizing="border-box"
       p="4rem 2rem 2rem 2rem"
       minWidth="100vw"
-      // maxWidth="2000px"
       backgroundColor="#ffda9b"
     >
-      <Navbar />
+      <Navbar setDrawerOpen={setDrawerOpen} />
+      <Button onClick={() => setDrawerOpen(true)} my={3}>
+        See Team
+      </Button>
       <Drawer
         isOpen={drawerOpen}
         placement="right"
@@ -111,7 +113,6 @@ const PokemonList = () => {
                 +
               </Button>
             </Box>
-            <Button onClick={() => setDrawerOpen(true)}>See Team</Button>
             <Text textAlign="center">page: {currentPage}</Text>
           </FlexWrapper>
         </FlexWrapper>

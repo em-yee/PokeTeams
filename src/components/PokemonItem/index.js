@@ -35,24 +35,6 @@ const PokemonItem = ({ data, pokemonTeam, setPokemonTeam }) => {
     }
   }, [data.name, name, pokemonData]);
 
-  // const handleShowPokemon = () => {
-  //   if (pokemonData.loading) {
-  //     return <p>Loading...</p>;
-  //   }
-  //
-  //   if (pokemonData.data[name] !== undefined && !pokemonData.loading) {
-  //     // const pokeData = pokemonData.data[name];
-  //
-  //     return <Image src={pokeData.imgUrl} alt="name" />;
-  //   }
-  //
-  //   if (pokemonData.errorMessage !== '') {
-  //     return <p>{pokemonData.errorMessage}</p>;
-  //   }
-  //
-  //   return <p>error fetching pokemon data</p>;
-  // };
-
   return pokeData.imgUrl !== '' && !pokemonData.loading ? (
     <Box
       maxW="150px"
@@ -76,11 +58,11 @@ const PokemonItem = ({ data, pokemonTeam, setPokemonTeam }) => {
 
       <Box>
         <Text textAlign="center">{name}</Text>
-        <Flex width="100%" alignItems="center" justifyContent="center">
-          <Link to={`/pokemon-info/${name}`}>
-            <InfoIcon w={3} h={3} mr="4px" />
+        <Flex width="100%" alignItems="center" justifyContent="space-between" minWidth="125px">
+          <Link to={`/pokemon-info/${name}`} mr="4px">
+            <InfoIcon w={4} h={4} />
           </Link>
-          <AddIcon w={3} h={3} ml="4px" onClick={handleAddToPokemonTeam} />
+          <AddIcon w={4} h={4} ml="4px" onClick={handleAddToPokemonTeam} />
         </Flex>
       </Box>
     </Box>

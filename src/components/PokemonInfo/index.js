@@ -7,44 +7,12 @@ import { FetchPokemon } from '../../redux/actions/pokemonActions';
 import { useParams } from 'react-router-dom';
 import Navbar from '../Navbar';
 import { useWindowSize } from '../../hooks';
-import {
-  BugSm,
-  BugLg,
-  DarkLg,
-  DarkSm,
-  DragonLg,
-  DragonSm,
-  ElectricLg,
-  ElectricSm,
-  FairyLg,
-  FairySm,
-  FightLg,
-  FightSm,
-  FireLg,
-  FireSm,
-  FlyingLg,
-  FlyingSm,
-  GhostLg,
-  GhostSm,
-  GrassLg,
-  GrassSm,
-  GroundLg,
-  GroundSm,
-  IceLg,
-  IceSm,
-  NormalLg,
-  NormalSm,
-  PoisonLg,
-  PoisonSm,
-  PsychicLg,
-  PsychicSm,
-  RockLg,
-  RockSm,
-  SteelLg,
-  SteelSm,
-  WaterLg,
-  WaterSm,
-} from '../../assets/icons';
+import * as TypeIcon from '../../assets/icons';
+import styled from '@emotion/styled';
+
+const PokemonTypeImage = styled(Image)`
+  max-height: 40px;
+`;
 
 function PokemonInfo() {
   const { pokemon } = useParams();
@@ -62,59 +30,165 @@ function PokemonInfo() {
   const handleFindIconType = (pokemonType) => {
     switch (pokemonType) {
       case 'bug':
-        return <Image key={uuidv4()} src={size.width < 800 ? BugSm : BugLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.BugSm : TypeIcon.BugLg}
+            maxH="40px"
+          />
+        );
       case 'dark':
-        return <Image key={uuidv4()} src={size.width < 800 ? DarkSm : DarkLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.DarkSm : TypeIcon.DarkLg}
+            maxH="40px"
+          />
+        );
 
       case 'dragon':
-        return <Image key={uuidv4()} src={size.width < 800 ? DragonSm : DragonLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.DragonSm : TypeIcon.DragonLg}
+            maxH="40px"
+          />
+        );
 
       case 'electric':
         return (
-          <Image key={uuidv4()} src={size.width < 800 ? ElectricSm : ElectricLg} maxH="40px" />
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.ElectricSm : TypeIcon.ElectricLg}
+            maxH="40px"
+          />
         );
 
       case 'fairy':
-        return <Image key={uuidv4()} src={size.width < 800 ? FairySm : FairyLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.FairySm : TypeIcon.FairyLg}
+            maxH="40px"
+          />
+        );
 
       case 'fight':
-        return <Image key={uuidv4()} src={size.width < 800 ? FightSm : FightLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.FightSm : TypeIcon.FightLg}
+            maxH="40px"
+          />
+        );
 
       case 'fire':
-        return <Image key={uuidv4()} src={size.width < 800 ? FireSm : FireLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.FireSm : TypeIcon.FireLg}
+            maxH="40px"
+          />
+        );
 
       case 'flying':
-        return <Image key={uuidv4()} src={size.width < 800 ? FlyingSm : FlyingLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.FlyingSm : TypeIcon.FlyingLg}
+            maxH="40px"
+          />
+        );
 
       case 'rock':
-        return <Image key={uuidv4()} src={size.width < 800 ? RockSm : RockLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.RockSm : TypeIcon.RockLg}
+            maxH="40px"
+          />
+        );
 
       case 'psychic':
-        return <Image key={uuidv4()} src={size.width < 800 ? PsychicSm : PsychicLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.PsychicSm : TypeIcon.PsychicLg}
+            maxH="40px"
+          />
+        );
 
       case 'poison':
-        return <Image key={uuidv4()} src={size.width < 800 ? PoisonSm : PoisonLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.PoisonSm : TypeIcon.PoisonLg}
+            maxH="40px"
+          />
+        );
 
       case 'normal':
-        return <Image key={uuidv4()} src={size.width < 800 ? NormalSm : NormalLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.NormalSm : TypeIcon.NormalLg}
+            maxH="40px"
+          />
+        );
 
       case 'ground':
-        return <Image key={uuidv4()} src={size.width < 800 ? GroundSm : GroundLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.GroundSm : TypeIcon.GroundLg}
+            maxH="40px"
+          />
+        );
 
       case 'grass':
-        return <Image key={uuidv4()} src={size.width < 800 ? GrassSm : GrassLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.GrassSm : TypeIcon.GrassLg}
+            maxH="40px"
+          />
+        );
 
       case 'ghost':
-        return <Image key={uuidv4()} src={size.width < 800 ? GhostSm : GhostLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.GhostSm : TypeIcon.GhostLg}
+            maxH="40px"
+          />
+        );
 
       case 'steel':
-        return <Image key={uuidv4()} src={size.width < 800 ? SteelSm : SteelLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.SteelSm : TypeIcon.SteelLg}
+            maxH="40px"
+          />
+        );
 
       case 'water':
-        return <Image key={uuidv4()} src={size.width < 800 ? WaterSm : WaterLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.WaterSm : TypeIcon.WaterLg}
+            maxH="40px"
+          />
+        );
 
       case 'ice':
-        return <Image key={uuidv4()} src={size.width < 800 ? IceSm : IceLg} maxH="40px" />;
+        return (
+          <PokemonTypeImage
+            key={uuidv4()}
+            src={size.width < 800 ? TypeIcon.IceSm : TypeIcon.IceLg}
+            maxH="40px"
+          />
+        );
 
       default:
         return;
@@ -159,7 +233,7 @@ function PokemonInfo() {
           setBgColor('#E49B95');
           break;
         case 'fire':
-          setBgColor('#CD7626');
+          setBgColor('#FFEACF');
           break;
         case 'flying':
           setBgColor('#E2F0FF');
@@ -180,7 +254,7 @@ function PokemonInfo() {
           setBgColor('#FFE7D3');
           break;
         case 'grass':
-          setBgColor('#4E7950');
+          setBgColor('#e9f5db');
           break;
         case 'ghost':
           setBgColor('#D6D7FF');
@@ -196,15 +270,6 @@ function PokemonInfo() {
       }
     }
   }, [pokeData]);
-
-  // React.useEffect(() => {
-  //   // console.log(pokeData);
-  //   console.log(pokeData.types[0].type.name);
-  // }, [pokeData]);
-
-  // React.useEffect(() => {
-  //   console.log(pokeData);
-  // }, [pokeData]);
 
   return (
     <FlexWrapper
@@ -240,12 +305,7 @@ function PokemonInfo() {
             </Tr>
             <Tr>
               <Th>Types:</Th>
-              <Td>
-                {pokeData.types.map((item) => handleFindIconType(item.type.name))}
-                {/*{handleFindIconType(pokeData.types[0].type.name)}*/}
-                {/*<br />*/}
-                {/*{handleFindIconType(pokeData.types[1].type.name)}*/}
-              </Td>
+              <Td>{pokeData.types.map((item) => handleFindIconType(item.type.name))}</Td>
             </Tr>
           </Tbody>
         </Table>
