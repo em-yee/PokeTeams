@@ -27,6 +27,7 @@ function PokemonInfo() {
   const [bgColor, setBgColor] = React.useState('');
   const size = useWindowSize();
 
+  //giant switch statement to change between the different icon size depending on size of screen
   const handleFindIconType = (pokemonType) => {
     switch (pokemonType) {
       case 'bug':
@@ -210,6 +211,7 @@ function PokemonInfo() {
     }
   }, [pokemonData, pokemon]);
 
+  //giant switch statement to change between the different themes for bg depending on type
   React.useEffect(() => {
     if (pokeData.types.length !== 0) {
       console.log(pokeData);

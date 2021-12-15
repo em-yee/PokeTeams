@@ -15,12 +15,14 @@ const NavbarWrapper = styled(Box)`
   background: #dd8749;
   color: white;
   padding: 1rem;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
 `;
 
 function Navbar({ pokeType, setDrawerOpen }) {
   const [bgColor, setBgColor] = React.useState('');
   const [whiteText, setWhiteText] = React.useState(true);
 
+  //giant switch statement to change between the different themes for navbar depending on type
   React.useEffect(() => {
     if (pokeType !== '') {
       switch (pokeType) {

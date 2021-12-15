@@ -11,3 +11,6 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
+
+//trying to get data from pokemonlistreducer from a component
+//explain what an action creator does using redux thunk
