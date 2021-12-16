@@ -11,7 +11,8 @@ PokéTeams is a front-end web application built using React and Redux. This site
 
 
 ### API
-- PokéAPI
+- [PokéAPI] (https://pokeapi.co/
+)
 
 ## Screenshots
 
@@ -22,6 +23,6 @@ PokéTeams is a front-end web application built using React and Redux. This site
 
 ### Stretch Goals
 - Create a search function
-- Adjust the drawer to fit mobile devices 
-- Add Pokémon abilities and what type they're strongest/weakest against 
+- Adjust the drawer to fit mobile devices
+- Add Pokémon abilities and what type they're strongest/weakest against
 
